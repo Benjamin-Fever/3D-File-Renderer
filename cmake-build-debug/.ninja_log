@@ -1,21 +1,23 @@
 # ninja log v5
+4218	5751	6806886482260018	ext/stb/CMakeFiles/stb.dir/stb.c.obj	dc063350513b5860
 1	161	6806885065581393	ext/glm/CMakeFiles/glm_dummy.dir/detail/dummy.cpp.obj	cb690f2123ef49b1
-11	6909	6806885132884049	ext/glm/CMakeFiles/glm_dummy.dir/detail/glm.cpp.obj	ca7e44fd6924403
 6914	9953	6806885163491361	bin/glm_dummy.exe	16225ba6dbbe8f95
+2	2897	6806886453384922	ext/glfw/src/CMakeFiles/glfw.dir/context.c.obj	b4b5fab2ba5294af
+11	6909	6806885132884049	ext/glm/CMakeFiles/glm_dummy.dir/detail/glm.cpp.obj	ca7e44fd6924403
 38	2872	6806886453379931	ext/glfw/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	d37486eb1c98b503
 12	2885	6806886453345000	ext/glfw/src/CMakeFiles/glfw.dir/init.c.obj	385df056c75c689c
-2	2897	6806886453384922	ext/glfw/src/CMakeFiles/glfw.dir/context.c.obj	b4b5fab2ba5294af
 20	2907	6806886453619478	ext/glfw/src/CMakeFiles/glfw.dir/monitor.c.obj	26195c11f5e2ff7
 48	2935	6806886453963826	ext/glfw/src/CMakeFiles/glfw.dir/window.c.obj	10ce6fa4bb63fc7a
+6016	9657	6806886521355684	src/CMakeFiles/base.dir/main.cpp.obj	cdc3f4e9eab7aa9b
 29	2945	6806886454043670	ext/glfw/src/CMakeFiles/glfw.dir/input.c.obj	2c5ecee5d913a42
 2897	4202	6806886466754501	ext/glfw/src/CMakeFiles/glfw.dir/win32_tls.c.obj	31e033210c8a54ff
 2886	4217	6806886466869285	ext/glfw/src/CMakeFiles/glfw.dir/win32_time.c.obj	53a6af295a47fe57
 2875	4234	6806886467078886	ext/glfw/src/CMakeFiles/glfw.dir/win32_init.c.obj	446f5148aecefe28
+9028	9238	6806886517158664	bin/libimgui.a	7c557c0a8e2cf028
 2936	4303	6806886467792530	ext/glfw/src/CMakeFiles/glfw.dir/winmm_joystick.c.obj	786006dbfad6b7b6
 2946	4399	6806886468745717	ext/glfw/src/CMakeFiles/glfw.dir/wgl_context.c.obj	4a36c9618fb9b772
 2908	4484	6806886469594109	ext/glfw/src/CMakeFiles/glfw.dir/win32_window.c.obj	1c04ad7ee0275c6c
 4484	4785	6806886472603380	bin/libglfw3.a	b4cdb2038bd4b19a
-4218	5751	6806886482260018	ext/stb/CMakeFiles/stb.dir/stb.c.obj	dc063350513b5860
 5751	5965	6806886484331088	bin/libstb.a	730d730b6d2816f
 4304	6015	6806886484924989	ext/imgui/CMakeFiles/imgui.dir/imgui_demo.cpp.obj	bccc3f4a36e3a8e7
 4399	6715	6806886491891711	ext/imgui/CMakeFiles/imgui.dir/imgui_draw.cpp.obj	f679cedf6da05269
@@ -24,7 +26,5 @@
 8004	8190	6806886506678589	bin/libglew.a	fe60c20429f4589
 5966	8442	6806886509148888	src/CMakeFiles/base.dir/cgra/cgra_shader.cpp.obj	c20814fb2bc1da57
 4235	9028	6806886515012755	ext/imgui/CMakeFiles/imgui.dir/imgui.cpp.obj	9e4d0eb3a3dea844
-9028	9238	6806886517158664	bin/libimgui.a	7c557c0a8e2cf028
-6016	9657	6806886521355684	src/CMakeFiles/base.dir/main.cpp.obj	cdc3f4e9eab7aa9b
 6716	10199	6806886526765399	src/CMakeFiles/base.dir/application.cpp.obj	a43cf365857c8f36
 10200	10887	6806886533539751	bin/base.exe	d6808ee83a68118d

@@ -9,6 +9,9 @@
 SET(sources
 	"application.hpp"
 	"application.cpp"
+
+    "objfile.cpp"
+    "objfile.hpp"
 	
 	"opengl.hpp"
 
