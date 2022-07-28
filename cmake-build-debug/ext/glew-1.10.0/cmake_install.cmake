@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/gamer/CLionProjects/CGRA-Project-1/ext/glew-1.10.0
+# Install script for directory: C:/Users/Benjamin Fever/CLionProjects/CGRA-Project-1/ext/glew-1.10.0
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/gamer/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/Benjamin Fever/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
 endif()
 

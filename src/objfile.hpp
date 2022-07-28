@@ -25,6 +25,6 @@ class objfile{
 
     public:
         std::vector<vertex> vertexs;
-        void loadOBJ(char[521]);
+        void loadOBJ(char[]);
 };
 

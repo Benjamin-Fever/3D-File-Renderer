@@ -73,14 +73,14 @@ void Application::renderGUI() {
 	ImGui::Begin("Mesh loader", 0);
 
 	// Loading buttons
-	static char filename[512] = "";
+	static char filename[512] = "C:\\Users\\Benjamin Fever\\CLionProjects\\CGRA-Project-1\\res\\assets\\teapot.obj";
 	ImGui::InputText("", filename, 512);
 	ImGui::SameLine();
 
 	if (ImGui::Button("Load")) {
 		// TODO load mesh from 'filename'
-        std::cout << filename << std::endl;
-        loadOBJ(filename);
+        objfile test;
+        test.loadOBJ(filename);
 	}
 
 	ImGui::SameLine();

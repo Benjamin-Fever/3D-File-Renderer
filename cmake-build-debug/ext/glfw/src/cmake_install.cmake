@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/gamer/CLionProjects/CGRA-Project-1/ext/glfw/src
+# Install script for directory: C:/Users/Benjamin Fever/CLionProjects/CGRA-Project-1/ext/glfw/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,10 +34,10 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/gamer/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/Benjamin Fever/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/bin/libglfw3.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "C:/Users/Benjamin Fever/CLionProjects/CGRA-Project-1/cmake-build-debug/bin/libglfw3.a")
 endif()
 
