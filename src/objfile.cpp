@@ -34,16 +34,11 @@ void objfile::loadOBJ(char filename[521]) {
             lineStream >> vertexNormal.x >> vertexNormal.y >> vertexNormal.z;
             vertexNormals.push_back(vertexNormal);
         }
-        else if (std::string(token) == "f"){ // Vertex face
-            std::stringstream faceVertex;
-            faceVertex << lineStream.str();
-            char data[30];
-            faceVertex.getline(data, 30, '/');
-            for (int i = 0; i < 3; i++){
-                int p;
-                std::istringstream(data) >> p;
-                p--;
-                vertexIndices.push_back(p);
+        else if (std::string(token) == "f") { // Vertex face
+            char data[100];
+            for (int i = 0; i < 3; i++) {
+                lineStream >> data;
+
             }
         }
     }
