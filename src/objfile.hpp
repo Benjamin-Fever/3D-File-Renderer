@@ -19,9 +19,9 @@ class objfile{
             glm::vec3 normal;
         };
 
-        std::vector<glm::vec3> vertex_positions;
-        std::vector<glm::vec2> vertex_uvs;
-        std::vector<glm::vec3> vertex_normals;
+        std::vector<glm::vec3> vertexPositions;
+        std::vector<glm::vec3> vertexNormals;
+        std::vector<int> vertexIndices;
 
     public:
         std::vector<vertex> vertexs;

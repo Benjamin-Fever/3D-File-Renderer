@@ -27,16 +27,24 @@ void objfile::loadOBJ(char filename[521]) {
         if (std::string(token) == "v"){ // Vertex position
             glm::vec3 vertexPosition;
             lineStream >> vertexPosition.x >> vertexPosition.y >> vertexPosition.z;
-            vertex_positions.push_back(vertexPosition);
+            vertexPositions.push_back(vertexPosition);
         }
         else if (std::string(token) == "vn"){ // Vertex vertexNormal
             glm::vec3 vertexNormal;
             lineStream >> vertexNormal.x >> vertexNormal.y >> vertexNormal.z;
-            vertex_normals.push_back(vertexNormal);
+            vertexNormals.push_back(vertexNormal);
         }
         else if (std::string(token) == "f"){ // Vertex face
-
-
+            std::stringstream faceVertex;
+            faceVertex << lineStream.str();
+            char data[30];
+            faceVertex.getline(data, 30, '/');
+            for (int i = 0; i < 3; i++){
+                int p;
+                std::istringstream(data) >> p;
+                p--;
+                vertexIndices.push_back(p);
+            }
         }
     }
 }
