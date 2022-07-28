@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/src
+# Install script for directory: C:/Users/gamer/CLionProjects/CGRA-Project-1/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/Benjamin Fever/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/gamer/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/src/cgra/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/src/cgra/cmake_install.cmake")
 
 endif()
 

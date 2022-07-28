@@ -13,6 +13,7 @@
 #include "application.hpp"
 #include "cgra/cgra_gui.hpp"
 #include "cgra/cgra_shader.hpp"
+#include "objfile.hpp"
 
 
 using namespace std;
@@ -75,8 +76,11 @@ void Application::renderGUI() {
 	static char filename[512] = "";
 	ImGui::InputText("", filename, 512);
 	ImGui::SameLine();
+
 	if (ImGui::Button("Load")) {
 		// TODO load mesh from 'filename'
+        std::cout << filename << std::endl;
+        loadOBJ(filename);
 	}
 
 	ImGui::SameLine();

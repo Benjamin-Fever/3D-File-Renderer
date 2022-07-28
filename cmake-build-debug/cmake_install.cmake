@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work
+# Install script for directory: C:/Users/gamer/CLionProjects/CGRA-Project-1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,18 +34,18 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/Benjamin Fever/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/gamer/AppData/Local/JetBrains/Toolbox/apps/CLion/ch-0/221.5921.27/bin/mingw/bin/objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/ext/glfw/cmake_install.cmake")
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/ext/glew-1.10.0/cmake_install.cmake")
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/ext/stb/cmake_install.cmake")
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/ext/imgui/cmake_install.cmake")
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/ext/glm/cmake_install.cmake")
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/src/cmake_install.cmake")
-  include("C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/res/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/ext/glfw/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/ext/glew-1.10.0/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/ext/stb/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/ext/imgui/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/ext/glm/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/src/cmake_install.cmake")
+  include("C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/res/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/Benjamin Fever/Downloads/CGRA251_Framework/base/work/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/gamer/CLionProjects/CGRA-Project-1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

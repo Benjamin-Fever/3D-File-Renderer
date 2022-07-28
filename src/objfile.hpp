@@ -13,18 +13,18 @@
 
 class objfile{
     private:
-        std::vector<glm::vec3> m_positions;
-        std::vector<glm::vec3> m_normals;
-        std::vector<unsigned int> m_indices;
+        struct vertex {
+            glm::vec3 position;
+            glm::vec2 uv;
+            glm::vec3 normal;
+        };
 
-        // GPU-side data
-        GLuint m_vao = 0;
-        GLuint m_vbo_pos = 0;
-        GLuint m_vbo_norm = 0;
-        GLuint m_ibo = 0;
+        std::vector<glm::vec3> vertex_positions;
+        std::vector<glm::vec2> vertex_uvs;
+        std::vector<glm::vec3> vertex_normals;
 
     public:
-        objfile(){
-
-        }
+        std::vector<vertex> vertexs;
+        void loadOBJ(char[521]);
 };
+
