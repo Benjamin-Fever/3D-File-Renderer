@@ -22,9 +22,8 @@ class objfile{
         GLuint m_vbo_norm = 0;
         GLuint m_ibo = 0;
 
-        // Position and Normal vectors
-        std::vector<glm::vec3> vertexPositions;
-        std::vector<glm::vec3> vertexNormals;
+        std::vector<glm::vec3> orderedPositions;
+        std::vector<glm::vec3> orderedNormals;
         std::vector<unsigned int> vertexIndices;
 
 

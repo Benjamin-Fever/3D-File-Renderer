@@ -10,6 +10,8 @@
 #include <string>
 
 void objfile::loadOBJ(char filename[521]) {
+    std::vector<glm::vec3> tempPositions;
+    std::vector<glm::vec3> tempNormals;
     std::ifstream file(filename); // Open the file
     for (int i =0; i < 4; i++) { // Skip first 4 lines
         file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -27,12 +29,12 @@ void objfile::loadOBJ(char filename[521]) {
         if (std::string(token) == "v"){ // Vertex position
             glm::vec3 vertexPosition;
             lineStream >> vertexPosition.x >> vertexPosition.y >> vertexPosition.z;
-            vertexPositions.push_back(vertexPosition);
+            tempPositions.push_back(vertexPosition);
         }
         else if (std::string(token) == "vn"){ // Vertex vertexNormal
             glm::vec3 vertexNormal;
             lineStream >> vertexNormal.x >> vertexNormal.y >> vertexNormal.z;
-            vertexNormals.push_back(vertexNormal);
+            tempNormals.push_back(vertexNormal);
         }
         else if (std::string(token) == "f") { // Vertex face
             char rawVert[100];
@@ -48,12 +50,14 @@ void objfile::loadOBJ(char filename[521]) {
                 ss >> p2; // push the second put into p2
                 ss >> data; // push the rest of the string stream into data this will give the format of "/<num>" where num is a face value
                 p3 = std::stoi(std::string(data).substr(1)); // ignore the starting / and convert it into an int
-                vertexIndices.push_back(p1-1);
-                vertexIndices.push_back(p3-1);
+                orderedPositions.push_back(tempPositions.at(p1 -1));
+                orderedNormals.push_back(tempNormals.at(p3 -1));
+
             }
         }
     }
 
+    for (int i = 0; i < orderedPositions.size(); i++) { vertexIndices.push_back(i); }
 
 }
 
@@ -75,7 +79,7 @@ void objfile::build(){
         //
         // upload Positions to this buffer
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo_pos);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * vertexPositions.size(), vertexPositions.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * orderedPositions.size(), orderedPositions.data(), GL_STATIC_DRAW);
         // this buffer will use location=0 when we use our VAO
         glEnableVertexAttribArray(0);
         // tell opengl how to treat data in location=0 - the data is treated in lots of 3 (3 floats = vec3)
@@ -83,7 +87,7 @@ void objfile::build(){
 
         // do the same thing for Normals but bind it to location=1
         glBindBuffer(GL_ARRAY_BUFFER, m_vbo_norm);
-        glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * vertexNormals.size(), vertexNormals.data(), GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * orderedNormals.size(), orderedNormals.data(), GL_STATIC_DRAW);
         glEnableVertexAttribArray(1);
         glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 0, nullptr);
 
@@ -114,11 +118,4 @@ void objfile::destroy() {
     glDeleteBuffers(1, &m_vbo_norm);
     glDeleteBuffers(1, &m_ibo);
     m_vao = 0;
-    vertexIndices.clear();
-    vertexNormals.clear();
-    vertexIndices.clear();
-    // Position and Normal vectors
-    std::vector<glm::vec3> vertexPositions;
-    std::vector<glm::vec3> vertexNormals;
-    std::vector<unsigned int> vertexIndices;
 }
