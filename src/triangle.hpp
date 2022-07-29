@@ -27,17 +27,17 @@ private:
 public:
 
 	TestTriangle() {
-		//upload vertex data
+		//upload Vertex data
 
-		// vertex 1
+		// Vertex 1
 		m_positions.push_back(glm::vec3(0, 0, 0));
 		m_normals.push_back(glm::vec3(0, 0, 1));
 
-		// vertex 2
+		// Vertex 2
 		m_positions.push_back(glm::vec3(10, 0, 0));
 		m_normals.push_back(glm::vec3(0, 0, 1));
 
-		// vertex 3
+		// Vertex 3
 		m_positions.push_back(glm::vec3(0, 10, 0));
 		m_normals.push_back(glm::vec3(0, 0, 1));
 
@@ -52,7 +52,7 @@ public:
 		if (m_vao == 0) {
 			// generate buffers
 			glGenVertexArrays(1, &m_vao); // VAO stores information about how the buffers are set up
-			glGenBuffers(1, &m_vbo_pos); // VBO stores the vertex data
+			glGenBuffers(1, &m_vbo_pos); // VBO stores the Vertex data
 			glGenBuffers(1, &m_vbo_norm);
 			glGenBuffers(1, &m_ibo); // IBO stores the indices that make up primitives
 

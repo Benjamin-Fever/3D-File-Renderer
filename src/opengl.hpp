@@ -108,7 +108,7 @@ namespace cgra {
 			return { o, glDeleteBuffers };
 		}
 
-		// returns a gl_object with an OpenGL vertex array identifier
+		// returns a gl_object with an OpenGL Vertex array identifier
 		static gl_object gen_vertex_array() {
 			GLuint o;
 			glGenVertexArrays(1, &o);

@@ -17167,7 +17167,7 @@ GLboolean GLEWAPIENTRY glewIsSupported (const char* name)
         }
 #endif
 #ifdef GL_SUN_vertex
-        if (_glewStrSame3(&pos, &len, (const GLubyte*)"vertex", 6))
+        if (_glewStrSame3(&pos, &len, (const GLubyte*)"Vertex", 6))
         {
           ret = GLEW_SUN_vertex;
           continue;

@@ -13,7 +13,6 @@
 #include "application.hpp"
 #include "cgra/cgra_gui.hpp"
 #include "cgra/cgra_shader.hpp"
-#include "objfile.hpp"
 
 
 using namespace std;
@@ -29,8 +28,7 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 	color_sb.set_shader(GL_FRAGMENT_SHADER, CGRA_SRCDIR + std::string("//res//shaders//default_frag.glsl"));
 	m_shader = color_sb.build();
 
-	// build the mesh for the triangle
-	m_model.setup();
+
 }
 
 
@@ -73,14 +71,15 @@ void Application::renderGUI() {
 	ImGui::Begin("Mesh loader", 0);
 
 	// Loading buttons
-	static char filename[512] = "C:\\Users\\Benjamin Fever\\CLionProjects\\CGRA-Project-1\\res\\assets\\teapot.obj";
+	static char filename[512] = "C:\\Users\\Benjamin Fever\\CLionProjects\\CGRA-Project-1\\res\\assets\\cube.obj";
 	ImGui::InputText("", filename, 512);
 	ImGui::SameLine();
 
 	if (ImGui::Button("Load")) {
 		// TODO load mesh from 'filename'
-        objfile test;
-        test.loadOBJ(filename);
+        m_model.loadOBJ(filename);
+        m_model.build();
+        m_model.draw();
 	}
 
 	ImGui::SameLine();

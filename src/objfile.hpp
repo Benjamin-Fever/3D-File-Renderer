@@ -10,21 +10,29 @@
 // project
 #include "opengl.hpp"
 
+#define ATTRIB_POSITION 0
+#define ATTRIB_NORMAL 1
+
 
 class objfile{
     private:
-        struct vertex {
-            glm::vec3 position;
-            glm::vec2 uv;
-            glm::vec3 normal;
-        };
+        // GPU-side data
+        GLuint m_vao = 0;
+        GLuint m_vbo_pos = 0;
+        GLuint m_vbo_norm = 0;
+        GLuint m_ibo = 0;
 
+        // Position and Normal vectors
         std::vector<glm::vec3> vertexPositions;
         std::vector<glm::vec3> vertexNormals;
-        std::vector<int> vertexIndices;
+        std::vector<unsigned int> vertexIndices;
+
 
     public:
-        std::vector<vertex> vertexs;
         void loadOBJ(char[]);
+
+    void build();
+
+    void draw();
 };
 

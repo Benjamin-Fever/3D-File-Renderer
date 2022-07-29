@@ -46,7 +46,7 @@ struct ImDrawChannel;               // Temporary storage for outputting drawing 
 struct ImDrawCmd;                   // A single draw command within a parent ImDrawList (generally maps to 1 GPU draw call)
 struct ImDrawData;                  // All draw command lists required to render the frame
 struct ImDrawList;                  // A single draw command list (generally one per window)
-struct ImDrawVert;                  // A single vertex (20 bytes by default, override layout with IMGUI_OVERRIDE_DRAWVERT_STRUCT_LAYOUT)
+struct ImDrawVert;                  // A single Vertex (20 bytes by default, override layout with IMGUI_OVERRIDE_DRAWVERT_STRUCT_LAYOUT)
 struct ImFont;                      // Runtime data for a single font within a parent ImFontAtlas
 struct ImFontAtlas;                 // Runtime data for multiple fonts, bake multiple fonts into a single texture, TTF font loader
 struct ImFontConfig;                // Configuration data when adding a font or merging fonts
@@ -1142,7 +1142,7 @@ struct ImDrawVert
     ImU32   col;
 };
 #else
-// You can override the vertex format layout by defining IMGUI_OVERRIDE_DRAWVERT_STRUCT_LAYOUT in imconfig.h
+// You can override the Vertex format layout by defining IMGUI_OVERRIDE_DRAWVERT_STRUCT_LAYOUT in imconfig.h
 // The code expect ImVec2 pos (8 bytes), ImVec2 uv (8 bytes), ImU32 col (4 bytes), but you can re-order them or add other fields as needed to simplify integration in your engine.
 // The type has to be described within the macro (you can either declare the struct or use a typedef)
 IMGUI_OVERRIDE_DRAWVERT_STRUCT_LAYOUT;

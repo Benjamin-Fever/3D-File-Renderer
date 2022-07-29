@@ -7,6 +7,7 @@
 // project
 #include "opengl.hpp"
 #include "triangle.hpp"
+#include "objfile.hpp"
 
 
 // Main application class
@@ -21,7 +22,7 @@ private:
 	GLuint m_shader;
 
 	// test triangle model
-	TestTriangle m_model;
+	objfile m_model;
 
 public:
 	// setup
