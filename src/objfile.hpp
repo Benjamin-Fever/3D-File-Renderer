@@ -30,11 +30,8 @@ class objfile{
 
     public:
         void loadOBJ(char[]);
-
-    void build();
-
-    void draw();
-
-    void destroy();
+        void build();
+        void draw();
+        void destroy();
 };
 

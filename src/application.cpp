@@ -71,7 +71,7 @@ void Application::renderGUI() {
 	ImGui::Begin("Mesh loader", 0);
 
 	// Loading buttons
-	static char filename[512] = "C:\\Users\\Benjamin Fever\\CLionProjects\\CGRA-Project-1\\res\\assets\\cube.obj";
+	static char filename[512] = "C:\\Users\\Benjamin Fever\\CLionProjects\\CGRA-Project-1\\res\\assets\\teapot.obj";
 	ImGui::InputText("", filename, 512);
 	ImGui::SameLine();
 

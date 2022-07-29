@@ -48,11 +48,8 @@ void objfile::loadOBJ(char filename[521]) {
                 ss >> p2; // push the second put into p2
                 ss >> data; // push the rest of the string stream into data this will give the format of "/<num>" where num is a face value
                 p3 = std::stoi(std::string(data).substr(1)); // ignore the starting / and convert it into an int
-                p1--;
-                p2--;
-                p3--;
-                vertexIndices.push_back(p1);
-                vertexIndices.push_back(p3);
+                vertexIndices.push_back(p1-1);
+                vertexIndices.push_back(p3-1);
             }
         }
     }
@@ -117,10 +114,11 @@ void objfile::destroy() {
     glDeleteBuffers(1, &m_vbo_norm);
     glDeleteBuffers(1, &m_ibo);
     m_vao = 0;
-    m_vbo_pos = 0;
-    m_vbo_norm = 0;
-    m_ibo = 0;
     vertexIndices.clear();
     vertexNormals.clear();
     vertexIndices.clear();
+    // Position and Normal vectors
+    std::vector<glm::vec3> vertexPositions;
+    std::vector<glm::vec3> vertexNormals;
+    std::vector<unsigned int> vertexIndices;
 }
