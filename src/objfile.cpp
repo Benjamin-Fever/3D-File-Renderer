@@ -109,3 +109,12 @@ void objfile::draw() {
     // tell opengl to draw our VAO using the draw mode and how many verticies to render
     glDrawElements(GL_TRIANGLES, vertexIndices.size(), GL_UNSIGNED_INT, 0);
 }
+
+void objfile::destroy() {
+    // delete the data buffers
+    glDeleteVertexArrays(1, &m_vao);
+    glDeleteBuffers(1, &m_vbo_pos);
+    glDeleteBuffers(1, &m_vbo_norm);
+    glDeleteBuffers(1, &m_ibo);
+    m_vao = 0;
+}

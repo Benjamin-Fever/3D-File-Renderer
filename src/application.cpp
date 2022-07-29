@@ -89,7 +89,7 @@ void Application::renderGUI() {
 
 	ImGui::SameLine();
 	if (ImGui::Button("Unload")) {
-		// TODO unload mesh
+		m_model.destroy();
 	}
 
 	// finish creating window
