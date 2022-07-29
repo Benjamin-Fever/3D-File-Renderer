@@ -21,6 +21,8 @@ private:
 	// basic shader
 	GLuint m_shader;
 
+	glm::vec4 myColor;
+
 	// test triangle model
 	objfile m_model;
 

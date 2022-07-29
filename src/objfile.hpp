@@ -32,5 +32,7 @@ class objfile{
         void build();
         void draw();
         void destroy();
+
+    void printMeshData();
 };
 

@@ -3,6 +3,7 @@
 // uniform data
 uniform mat4 uProjectionMatrix;
 uniform mat4 uModelViewMatrix;
+uniform vec4 uColor;
 
 // mesh data
 layout(location = 0) in vec3 aPosition;

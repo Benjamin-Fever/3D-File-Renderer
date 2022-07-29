@@ -117,5 +117,16 @@ void objfile::destroy() {
     glDeleteBuffers(1, &m_vbo_pos);
     glDeleteBuffers(1, &m_vbo_norm);
     glDeleteBuffers(1, &m_ibo);
+    vertexIndices.clear();
+    orderedPositions.clear();
+    orderedNormals.clear();
     m_vao = 0;
+}
+
+void objfile::printMeshData(){
+    for (int i = 0; i < vertexIndices.size(); i ++){
+        std::cout << "Position: " << orderedPositions.at(i).x << " " << orderedPositions.at(i).y << " " <<
+        orderedPositions.at(i).z << " " << "Normal: " << orderedNormals.at(i).x << " " << orderedNormals.at(i).y << " " << orderedNormals.at(i).z << " " <<
+                  "Vertex: " << vertexIndices.at(i) << std::endl;
+    }
 }

@@ -28,7 +28,7 @@ Application::Application(GLFWwindow *window) : m_window(window) {
 	color_sb.set_shader(GL_FRAGMENT_SHADER, CGRA_SRCDIR + std::string("//res//shaders//default_frag.glsl"));
 	m_shader = color_sb.build();
 
-
+    myColor = vec4(0.066, 0.341, 0.215, 1);
 }
 
 
@@ -58,6 +58,9 @@ void Application::render() {
 	glUniformMatrix4fv(glGetUniformLocation(m_shader, "uProjectionMatrix"), 1, false, value_ptr(proj));
 	glUniformMatrix4fv(glGetUniformLocation(m_shader, "uModelViewMatrix"), 1, false, value_ptr(view));
 
+    GLint myLoc = glGetUniformLocation(m_shader, "uColor");
+    glProgramUniform4fv(m_shader, myLoc, 1, value_ptr(myColor));
+
 	// draw the model
 	m_model.draw();
 }
@@ -71,12 +74,11 @@ void Application::renderGUI() {
 	ImGui::Begin("Mesh loader", 0);
 
 	// Loading buttons
-	static char filename[512] = "C:\\Users\\Benjamin Fever\\CLionProjects\\CGRA-Project-1\\res\\assets\\teapot.obj";
+	static char filename[512] = "";
 	ImGui::InputText("", filename, 512);
 	ImGui::SameLine();
 
 	if (ImGui::Button("Load")) {
-		// TODO load mesh from 'filename'
         m_model.loadOBJ(filename);
         m_model.build();
         m_model.draw();
@@ -84,13 +86,15 @@ void Application::renderGUI() {
 
 	ImGui::SameLine();
 	if (ImGui::Button("Print")) {
-		// TODO print mesh data
+        m_model.printMeshData();
 	}
 
 	ImGui::SameLine();
 	if (ImGui::Button("Unload")) {
 		m_model.destroy();
 	}
+
+    ImGui::ColorEdit4("Colour", value_ptr(myColor));
 
 	// finish creating window
 	ImGui::End();
