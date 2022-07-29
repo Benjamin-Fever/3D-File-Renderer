@@ -117,4 +117,10 @@ void objfile::destroy() {
     glDeleteBuffers(1, &m_vbo_norm);
     glDeleteBuffers(1, &m_ibo);
     m_vao = 0;
+    m_vbo_pos = 0;
+    m_vbo_norm = 0;
+    m_ibo = 0;
+    vertexIndices.clear();
+    vertexNormals.clear();
+    vertexIndices.clear();
 }
