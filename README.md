@@ -1,5 +1,5 @@
-I made a render to read the .obj file and sorted all the data respectively into vertices positions, indices and normals
-using open gl to render the object heavily based off the example triangle.hpp that was supplied. To use it just type
-in the location of the object you want to create and click load. If you wish to load a new one you need to unload
-what is already there if there is something already loaded. You can click the print button to print to the console the
-mesh data. You can also adjust the colour of the object using the h,s,v sliders.
+# 3D File Renderer
+This was a program for my computer graphics course ( CGRA251 ) In this assignment I covered how 3D objects are defined and drawn onto a computer using openGL
+This program reads a .obj file and reads through and renders the file on the screen using sliders to rotate and zoom on the object. This was a very
+interesting challenge learning how a 3D object is rendered onto our 2 dimensional computer screens. This taught me the basics of 3D computer
+graphics and the algorithm and file structures accompanied with them. As well as learning basics of openGL.
